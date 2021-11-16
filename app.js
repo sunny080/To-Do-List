@@ -11,7 +11,7 @@ updateList();
 
 function addEvent(){
     let input =document.getElementById("hello");
-    let tasksArr = JSON.parse(localStorage.tasks);
+    let tasksArr = JSON.parse('{"localStorage.tasks"}');
     tasksArr.push(input.value);
     localStorage.tasks = JSON.stringify(tasksArr);
     input.value="";
@@ -21,7 +21,7 @@ function updateList() {
     let ul =document.getElementById("tasks");
 
 
-    let tasksArr = JSON.parse(localStorage.tasks);
+    let tasksArr = JSON.parse('{"localStorage.tasks"}');
 
    let length = tasksArr.length - 1;
    let html = "";
