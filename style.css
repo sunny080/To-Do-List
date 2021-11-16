@@ -17,12 +17,12 @@ body{
 }
 
 .con{
-   
     width: 100%;
     max-width: 400px;
     background-color: #FFF;
     border-radius: 5px;
     padding: 25px;
+
 }
 header{
     font-size: 30px;
@@ -92,9 +92,11 @@ input:hover{
     cursor: default;
     overflow: hidden;
     color: rgb(233, 156, 69);
+
 }
 
 .todolist li span{
+  
   position: absolute;
   background-color: #e74c3c;
   right: -45px;
