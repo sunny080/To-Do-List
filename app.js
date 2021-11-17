@@ -1,9 +1,17 @@
+
+
+
+localStorage.tasks = JSON.stringify([]);
+
+
 updateList();
+
 
 
 
 function addEvent() {
   let input = document.getElementById("hello");
+
   let tasksArr = JSON.parse(localStorage.tasks);
   tasksArr.push(input.value);
   localStorage.tasks = JSON.stringify(tasksArr);
@@ -14,7 +22,6 @@ function updateList() {
 
   
   let ul = document.getElementById("tasks");
-
   let tasksArr = JSON.parse(localStorage.tasks);
 
   let length = tasksArr.length - 1;
@@ -31,5 +38,18 @@ function removeItem(span_tag) {
   tasksArr.splice(index_id,1);
   localStorage.tasks = JSON.stringify(tasksArr);
   updateList();
+
+}
+
+
+
+
+
+
+function clearStorage(){
+
+  console.log ('clearing the storage');
+
+  localStorage.clear();
 
 }
