@@ -15,26 +15,25 @@
 <body>
 
 
-<div class="hool">
+    <div class="hool">
 
-    <div class="con">
-        <header>Todo app</header>
-        <div class="inputfield">
-            <input id="hello" type="text" placeholder="add your new todo">
-            <button onclick="addEvent()">+</button>
+        <div class="con">
+            <header>Todo app</header>
+            <div class="inputfield">
+                <input id="hello" type="text" placeholder="add your new todo">
+                <button onclick="addEvent()">+</button>
+            </div>
+            <ul id="tasks" class="todolist">
+
+            </ul>
+            <button id="clear" onclick="clearStorage()">clear </button>
+
         </div>
-        <ul id="tasks" class="todolist">
 
-        </ul>
-   <button id="clear"  onclick="location.reload()">clear   </button>
+
+
 
     </div>
-
-
-
-
-</div>
-
 
 
     <script src="app.js"></script>

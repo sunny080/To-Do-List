@@ -1,10 +1,12 @@
 
 
-
-localStorage.tasks = JSON.stringify([]);
-
-
+if (localStorage.tasks === undefined) {
+  console.log('Task Array Initialized')
+  localStorage.tasks = JSON.stringify([]);
+}
 updateList();
+
+
 
 
 
@@ -27,9 +29,10 @@ function updateList() {
   let length = tasksArr.length - 1;
   let html = "";
   for (let i = length; i >= 0; i--) {
-    html += '<li id = "' + i +   '">' + tasksArr[i] + '<span onclick="removeItem(this)">delete</span></li>';
+    html += '<a class="son" href="#"> <li id = "' + i +   '" class="him">' + tasksArr[i] + '   <span onclick="removeItem(this)">delete</span></li></a>';
   }
   ul.innerHTML = html;
+
 }
 
 function removeItem(span_tag) {
@@ -39,6 +42,12 @@ function removeItem(span_tag) {
   localStorage.tasks = JSON.stringify(tasksArr);
   updateList();
 
+}
+
+function clearStorage(){
+  localStorage.tasks = JSON.stringify([]);
+  updateList()
+  console.log(localStorage.tasks)
 }
 
 
