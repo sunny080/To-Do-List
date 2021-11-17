@@ -45,11 +45,3 @@ function removeItem(span_tag) {
 
 
 
-
-function clearStorage(){
-
-  console.log ('clearing the storage');
-
-  localStorage.clear();
-
-}
