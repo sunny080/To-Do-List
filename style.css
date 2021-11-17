@@ -95,10 +95,10 @@ input:hover{
 
 }
 
-.son{
+#son{
     text-decoration: none;
 }
-.son:focus{
+#son:focus{
     text-decoration: line-through;
 }
 

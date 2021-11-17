@@ -29,8 +29,8 @@ function updateList() {
   let length = tasksArr.length - 1;
   let html = "";
   for (let i = length; i >= 0; i--) {
-    html += '<a class="son" href="#"> <li id = "' + i +   '" class="him">' + tasksArr[i] + '   <span onclick="removeItem(this)">delete</span></li></a>';
-  }
+    html += '<a id="son" onclick="strike()" href="#"> <li id = "' + i +   '" class="him">' + tasksArr[i] + '   <span onclick="removeItem(this)">delete</span></li></a>';
+  } 
   ul.innerHTML = html;
 
 }
@@ -51,6 +51,11 @@ function clearStorage(){
 }
 
 
-
-
+function strike(index){
+  if (elements[index].includes("<strike>")){
+    elements[index] = elements[index].replace("<strike>","");
+    elements[index] = elements[index].replace("</strike>","");
+    }else elements[index] = "<strike>" + elements[index] + "</strike>";
+    display();
+}
 
