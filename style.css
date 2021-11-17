@@ -138,3 +138,19 @@ li:hover > span{
     height: 50px;
     margin-left: 15%;
 }
+#clear{
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 15px;
+  color: rgb(66, 66, 66);
+ 
+  background-color: rgb(238, 237, 164);
+}
+#clear:hover{
+    background-color: yellow;
+    transition: .3s;
+    scale: 1.1;
+}
